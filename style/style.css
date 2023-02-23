@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+.left-side {
+  background-color: skyblue;
+  width: 100%;
+  height: 100vh;
+}
+.left-side .pizzaContainer {
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.left-side .pizzaContainer .pizza {
+  background-color: white;
+  width: 470px;
+  height: 470px;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.left-side .pizzaContainer .pizza img {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.left-side .pizzaContainer .transp {
+  background: transparent;
+  width: 605px;
+  height: 605px;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border: 5px solid rgb(30, 77, 194);
+}
+.left-side .pizza-status {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+}
+.left-side .text {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  opacity: 0.3;
+}
+.left-side .order {
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  border-top: 300px solid rgb(30, 77, 194);
+  left: 152px;
+  top: 20px;
+  rotate: 30.5deg;
+}
+.left-side .order .text {
+  top: -290px;
+  left: -30px;
+  transform: rotate(5deg);
+}
+.left-side .prep {
+  transform: scale(1.1);
+  z-index: 5;
+  border-bottom: 225px solid transparent;
+  border-top: 225px solid transparent;
+  border-right: 300px solid rgb(209, 67, 20);
+  border-radius: 50%;
+  right: 4px;
+  bottom: 40px;
+  rotate: 13.8deg;
+}
+.left-side .prep .text {
+  bottom: -20px;
+  right: -305px;
+  transform: rotate(91deg);
+  opacity: 1;
+}
+.left-side .baking {
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  border-bottom: 300px solid rgb(30, 77, 194);
+  border-radius: 50%;
+  left: 82px;
+  bottom: 0px;
+  rotate: -3deg;
+}
+.left-side .baking .text {
+  bottom: -285px;
+  left: -50px;
+  transform: rotate(1deg);
+}
+.left-side .delivery {
+  border-bottom: 225px solid transparent;
+  border-top: 225px solid transparent;
+  border-left: 300px solid rgb(30, 77, 194);
+  border-radius: 50%;
+  left: 50px;
+  top: -37px;
+  rotate: 48.2deg;
+}
+.left-side .delivery .text {
+  top: -20px;
+  left: -330px;
+  transform: rotate(-90deg);
+}
+.left-side .check {
+  border-bottom: 225px solid transparent;
+  border-top: 225px solid transparent;
+  border-left: 300px solid rgb(30, 77, 194);
+  border-radius: 50%;
+  left: 8px;
+  bottom: 24px;
+  rotate: -20deg;
+}
+.left-side .check .text {
+  top: 0px;
+  left: -315px;
+  transform: rotate(85deg);
+}
+
+.right-side {
+  background-color: aliceblue;
+}
+.right-side .title-A {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 50px;
+}
+.right-side .products img {
+  width: 40px;
+}
+.right-side .select img {
+  width: 150px;
+}/*# sourceMappingURL=style.css.map */
