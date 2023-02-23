@@ -15,7 +15,8 @@
 <body>
   <div class="container-fluid">
     <div class="row m-0 p-0">
-      <div class="col-8 left-side">
+      <div class="left-bar col-lg-2"></div>
+      <div class="col-7 left-side">
         <div class="pizzaContainer">
           <div class="pizza-status order">
             <span class="text">ORDER</span>
@@ -33,63 +34,104 @@
             <span class="text">DELIVERY</span>
           </div>
 
-          <div class="pizza">
-            <img src="images/pizzaa.png" class="img-fluid" alt="">
+          <div id="pizza-back">
+            <img id="pizza" src="images/pizzar.png" class="img-fluid" alt="">
           </div>
           <div class="transp"></div>
         </div>
       </div>
 
 
-      <div class="col-4 right-side">
+      <div class="col-3 right-side">
 
-        <div class="products">
-          <p class="title-A first">Products</p>
-          <img class="img-fluid" src="images/tomato-sauce.png" alt="">
-          <img class="img-fluid" src="images/salt.png" alt="">
-          <img class="img-fluid" src="images/pepper.png" alt="">
-          <img class="img-fluid" src="images/pepperon.png" alt="">
-          <img class="img-fluid" src="images/doner-kebab.png" alt="">
-          <img class="img-fluid" src="images/chili.png" alt="">
-          <img class="img-fluid" src="images/meatballs.png" alt="">
-          <img class="img-fluid" src="images/ladle.png" alt="">
-          <img class="img-fluid" src="images/cheese.png" alt="">
-          <img class="img-fluid" src="images/chicken-legs.png" alt="">
+        <p class="title-A first">Products<i class="fa-solid fa-caret-right"></i> <span class="sub-title">Souces</span>
+        </p>
+        <div class="main-menu">
+          <div class="products seen" menu-type="souces">
+            <img id="product" class="img-fluid" src="images/tomato-sauce.png" alt="">
+            <img id="product" class="img-fluid" src="images/salt.png" alt="">
+            <img id="product" class="img-fluid" src="images/pepper.png" alt="">
+            <img id="product" class="img-fluid" src="images/pepperon.png" alt="">
+          </div>
+          <div class="products hidden" menu-type="spices">
+            <img id="product" class="img-fluid" src="images/chili.png" alt="">
+            <img id="product" class="img-fluid" src="images/meatballs.png" alt="">
+            <img id="product" class="img-fluid" src="images/ladle.png" alt="">
+            <img id="product" class="img-fluid" src="images/cheese.png" alt="">
+            <img id="product" class="img-fluid" src="images/chicken-legs.png" alt="">
+          </div>
+          <div class="products hidden" menu-type="ingredients">
+            <img id="product" class="img-fluid" src="images/tomato-sauce.png" alt="">
+            <img id="product" class="img-fluid" src="images/salt.png" alt="">
+            <img id="product" class="img-fluid" src="images/pepper.png" alt="">
+            <img id="product" class="img-fluid" src="images/pepperon.png" alt="">
+            <img id="product" class="img-fluid" src="images/doner-kebab.png" alt="">
+            <img id="product" class="img-fluid" src="images/chili.png" alt="">
+            <img id="product" class="img-fluid" src="images/meatballs.png" alt="">
+            <img id="product" class="img-fluid" src="images/ladle.png" alt="">
+            <img id="product" class="img-fluid" src="images/cheese.png" alt="">
+            <img id="product" class="img-fluid" src="images/chicken-legs.png" alt="">
+          </div>
+          <div class="products hidden" menu-type="extra">
+            <img class="img-fluid" src="images/tomato-sauce.png" alt="">
+            <img class="img-fluid" src="images/salt.png" alt="">
+            <img class="img-fluid" src="images/pepper.png" alt="">
+            <img class="img-fluid" src="images/pepperon.png" alt="">
+            <img class="img-fluid" src="images/doner-kebab.png" alt="">
+            <img class="img-fluid" src="images/chili.png" alt="">
+            <img class="img-fluid" src="images/meatballs.png" alt="">
+            <img class="img-fluid" src="images/ladle.png" alt="">
+            <img class="img-fluid" src="images/cheese.png" alt="">
+            <img class="img-fluid" src="images/chicken-legs.png" alt="">
+          </div>
         </div>
 
-        <div class="size">
+
+        <div class="sizes">
           <p class="title-A">Select Size</p>
-          <input type="checkbox" name="large" id="large">
-          <label for="Pizza">Large</label>
-          <input type="checkbox" name="medium" id="medium">
-          <label for="Pizza">Medium</label>
-          <input type="checkbox" name="small" id="small">
-          <label for="Pizza">Small</label>
+          <input id="large" type="radio" value="large" class="size" name="pizza-size">
+          <label for="large">Large</label>
+          <input id="medium" type="radio" value="medium" checked class="size" name="pizza-size">
+          <label for="medium">Medium</label>
+          <input id="small" type="radio" value="small" class="size" name="pizza-size">
+          <label for="small">Small</label>
         </div>
 
-        <div class="select">
-        <div class="row">
+
+        <div class="crust-menu">
+          <div class="row m-0 p-0">
             <p class="title-A">Select Crust</p>
             <div class="col-6">
-              <input type="checkbox" name="large" id="large">
-              <label for="Pizza">Classic Crust</label>
-              <img class="img-fluid" src="images/Classic-Crust.png" alt="">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <input id="classic" type="radio" value="classic" class="crust" name="pizza-crust">
+                <label for="classic">Classic Crust
+                <img class="img-fluid" src="images/Classic-Crust.png" alt="">
+                </label>
+              </div>
             </div>
             <div class="col-6">
-              <input type="checkbox" name="medium" id="medium">
-              <label for="Pizza">Thin Crust</label>
-              <img class="img-fluid" src="images/Thin-Crust.png" alt="">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <input id="thin" type="radio" value="thin" class="crust" name="pizza-crust">
+                <label for="thin">Thin Crust
+                <img class="img-fluid" src="images/Thin-Crust.png" alt="">
+                </label>
+              </div>
             </div>
             <div class="col-6">
-              <input type="checkbox" name="small" id="small">
-              <label for="Pizza">Thinnest Crust</label>
-              <img class="img-fluid" src="images/Thinnest-Crust.png" alt="">
-
+              <div class="d-flex justify-content-between align-items-baseline">
+                <input id="thinnest" type="radio" value="thinnest" class="crust" name="pizza-crust">
+                <label for="thinnest">Thinnest Crust
+                <img class="img-fluid" src="images/Thinnest-Crust.png" alt="">
+                </label>
+              </div>
             </div>
             <div class="col-6">
-              <input type="checkbox" name="small" id="small">
-              <label for="Pizza">Duplex Crust</label>
-              <img class="img-fluid" src="images/Duplex-Crust.png" alt="">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <input id="double" type="radio" value="double" class="crust" name="pizza-crust">
+                <label for="double">Double Crust
+                <img class="img-fluid" src="images/Duplex-Crust.png" alt="">
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -97,7 +139,7 @@
     </div>
   </div>
 
-  <script src="images/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
