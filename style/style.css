@@ -1,13 +1,106 @@
 * {
   box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .left-side {
   background-color: skyblue;
+  position: relative;
+}
+.left-side .left-products {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  z-index: 5;
+}
+.left-side .left-products .left-product {
+  padding: 0 10px 0 10px;
+  background-color: rgb(216, 239, 248);
+  width: 115px;
+}
+.left-side .left-products .product-icon {
+  text-align: center;
+  background-color: rgb(30, 77, 194);
+  width: 20px;
+  color: rgb(216, 239, 248);
+}
+
+.bottom-side {
+  background-color: skyblue;
   width: 100%;
   height: 100vh;
+  position: relative;
 }
-.left-side .pizzaContainer {
+.bottom-side .timer-box {
+  border-left: 10px solid rgb(30, 77, 194);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(213, 129, 101);
+  transition: 500ms ease-in-out;
+  position: absolute;
+  width: 100px;
+  left: 98.6%;
+  top: 50px;
+}
+.bottom-side .timer-box img {
+  width: 90%;
+}
+.bottom-side .timer-box:hover {
+  left: 87%;
+  border-left: 10px solid transparent;
+}
+.bottom-side .selected-items {
+  position: absolute;
+  width: 200px;
+  left: 73%;
+  bottom: 0;
+}
+.bottom-side .selected-items img {
+  animation: itemsAnime 3000ms ease-in-out;
+  opacity: 0;
+  width: 90%;
+}
+.bottom-side .selected-items i {
+  animation: itemsAnime 1500ms ease-in-out;
+  opacity: 0;
+  animation-delay: 800ms;
+  color: green;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes itemsAnime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes iconAnime {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+.bottom-side .pizzaContainer {
   background-color: rgb(255, 255, 255);
   width: 600px;
   height: 600px;
@@ -17,7 +110,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.left-side .pizzaContainer #pizza-back {
+.bottom-side .pizzaContainer #pizza-back {
   background-color: white;
   width: 470px;
   height: 470px;
@@ -28,7 +121,7 @@
   transform: translate(-50%, -50%);
   z-index: 100;
 }
-.left-side .pizzaContainer #pizza-back #pizza {
+.bottom-side .pizzaContainer #pizza-back #pizza {
   position: relative;
   left: 50%;
   top: 50%;
@@ -39,7 +132,7 @@
      -moz-user-select: none;
           user-select: none;
 }
-.left-side .pizzaContainer .transp {
+.bottom-side .pizzaContainer .transp {
   background: transparent;
   width: 605px;
   height: 605px;
@@ -51,20 +144,20 @@
   z-index: 2;
   border: 5px solid rgb(30, 77, 194);
 }
-.left-side .pizza-status {
+.bottom-side .pizza-status {
   position: absolute;
   width: 0;
   height: 0;
   border-radius: 50%;
 }
-.left-side .text {
+.bottom-side .text {
   font-size: 30px;
   color: white;
   position: absolute;
   font-weight: bold;
   opacity: 0.3;
 }
-.left-side .order {
+.bottom-side .order {
   border-left: 225px solid transparent;
   border-right: 225px solid transparent;
   border-top: 300px solid rgb(30, 77, 194);
@@ -72,12 +165,12 @@
   top: 20px;
   rotate: 30.5deg;
 }
-.left-side .order .text {
+.bottom-side .order .text {
   top: -290px;
   left: -30px;
   transform: rotate(5deg);
 }
-.left-side .prep {
+.bottom-side .prep {
   transform: scale(1.1);
   z-index: 5;
   border-bottom: 225px solid transparent;
@@ -88,13 +181,13 @@
   bottom: 40px;
   rotate: 13.8deg;
 }
-.left-side .prep .text {
+.bottom-side .prep .text {
   bottom: -20px;
   right: -305px;
   transform: rotate(91deg);
   opacity: 1;
 }
-.left-side .baking {
+.bottom-side .baking {
   border-left: 225px solid transparent;
   border-right: 225px solid transparent;
   border-bottom: 300px solid rgb(30, 77, 194);
@@ -103,12 +196,12 @@
   bottom: 0px;
   rotate: -3deg;
 }
-.left-side .baking .text {
+.bottom-side .baking .text {
   bottom: -285px;
   left: -50px;
   transform: rotate(1deg);
 }
-.left-side .delivery {
+.bottom-side .delivery {
   border-bottom: 225px solid transparent;
   border-top: 225px solid transparent;
   border-left: 300px solid rgb(30, 77, 194);
@@ -117,12 +210,12 @@
   top: -37px;
   rotate: 48.2deg;
 }
-.left-side .delivery .text {
+.bottom-side .delivery .text {
   top: -20px;
   left: -330px;
   transform: rotate(-90deg);
 }
-.left-side .check {
+.bottom-side .check {
   border-bottom: 225px solid transparent;
   border-top: 225px solid transparent;
   border-left: 300px solid rgb(30, 77, 194);
@@ -131,7 +224,7 @@
   bottom: 24px;
   rotate: -20deg;
 }
-.left-side .check .text {
+.bottom-side .check .text {
   top: 0px;
   left: -315px;
   transform: rotate(85deg);

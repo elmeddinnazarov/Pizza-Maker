@@ -13,10 +13,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 <body>
-  <div class="container-fluid">
+  <div class="width-box">
     <div class="row m-0 p-0">
-      <div class="left-bar col-lg-2"></div>
-      <div class="col-7 left-side">
+      <div class="left-side col-1">
+        <div class="left-products">
+          <div class="d-flex"><p class="left-product">Mozarella</p> <p class="product-icon"> <i class="fa-solid fa-xmark"></i></p></div>        
+          <div class="d-flex"><p class="left-product">Tomatto</p> <p class="product-icon"> <i class="fa-solid fa-xmark"></i></p></div>        
+          <div class="d-flex"><p class="left-product">Salt</p> <p class="product-icon"> <i class="fa-solid fa-xmark"></i> </p></div>        
+          <div class="d-flex"><p class="left-product">spice</p> <p class="product-icon"> <i class="fa-solid fa-xmark"></i></p></div>        
+          <div class="d-flex"><p class="left-product">pepperoni</p> <p class="product-icon"> <i class="fa-solid fa-xmark"></i></p></div>          
+        </div>
+      </div>
+
+
+      <div class="col-8 bottom-side">
+
+        <div class="timer-box">
+          <img src="images/timer.webp" alt="">
+        </div>
+
         <div class="pizzaContainer">
           <div class="pizza-status order">
             <span class="text">ORDER</span>
@@ -39,13 +54,22 @@
           </div>
           <div class="transp"></div>
         </div>
+
+        <div class="selected-items">
+          <img class="img-fluid" src="images/Classic-Crust.png" alt="">
+          <i class="fa-regular fa-circle-check"></i>          
       </div>
+      </div>
+
+
 
 
       <div class="col-3 right-side">
 
-        <p class="title-A first">Products<i class="fa-solid fa-caret-right"></i> <span class="sub-title">Souces</span>
-        </p>
+
+
+
+        <p class="title-A first">Products<i class="fa-solid fa-caret-right"></i> <span class="sub-title">Souces</span></p>
         <div class="main-menu">
           <div class="products seen" menu-type="souces">
             <img id="product" class="img-fluid" src="images/tomato-sauce.png" alt="">
