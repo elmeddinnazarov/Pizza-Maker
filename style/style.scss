@@ -9,27 +9,46 @@
   background-color: skyblue;
   position: relative;
 
-  .left-products{
-    position: absolute;
-    left: 0;
-    top: 100px;
-    z-index: 5;
+    .product-box{
+        height: 25px;
+        position: absolute;
+        top: 100px;
+        z-index: 5;
+        left: 0;
+        animation: product-animation-add 1s ease-in;
 
-    .left-product{
-      padding:0 10px 0 10px ;
-      background-color: rgb(216, 239, 248);
-      width: 115px;      
-    }    
+        // X a onclick olunanda asagidaki animasyon ise dusecek
+        // animation: product-animation-remove 1s ease-out;
 
-    .product-icon {
-      text-align: center;
-      background-color:rgb(30, 77, 194);
-      width: 20px;
-      color: rgb(216, 239, 248);
+      .product-title{
+        padding:0 10px 0 10px ;
+        background-color: rgb(216, 239, 248);
+        width: 115px;
+      }    
+  
+      .product-icon {
+        text-align: center;
+        background-color:rgb(30, 77, 194);
+        width: 20px;
+        color: rgb(216, 239, 248);
+      }
     }
-
-
-  }
+    @keyframes product-animation-add {
+      from{
+        left: -200%;
+      }
+      to{
+        left: 0;
+      }
+    }
+    @keyframes product-animation-remove {
+      from{
+        left: 0;
+      }
+      to{
+        left: -200%;
+      }
+    }
 
 }
 
@@ -48,7 +67,7 @@
     transition: 500ms ease-in-out;
     position: absolute;
     width: 100px;
-    left: 98.6%;
+    left: 99%;
     top: 50px;
 
     img {
@@ -57,10 +76,8 @@
     }
 
     &:hover{
-      left: 87%;
+      left: 89%;
       border-left: 10px solid transparent;
-
-
 
     }
   }
