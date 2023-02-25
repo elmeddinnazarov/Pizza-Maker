@@ -18,14 +18,14 @@ const capitalize = text => text.charAt(0).toUpperCase() + text.slice(1);
 
 
 
-//product selection
+//product selection Section
 
 product.forEach(el => {
-    el.onclick = animation
+    el.onclick = productAnimation
 })
 
 
-function animation(){
+function productAnimation(){
     productsMenu.forEach((menu, index) => {
         if (menu.classList.contains("seen")){
             nextIndex = index + 1
@@ -45,7 +45,7 @@ function animation(){
 }
 
 
-// select size
+// Select Size Section
 
 const sizes = document.querySelectorAll(".size")
 const pizza = document.querySelector("#pizza")
@@ -54,9 +54,6 @@ const pizza = document.querySelector("#pizza")
 // size state
 
 let currentValue = 'medium' // 'small', 'medium', 'large'
-
-
-console.log(sizes);
 
 sizes.forEach(el => {
     el.onclick = sizeHandler
@@ -80,3 +77,52 @@ function sizeHandler(e){
             break
     }
 }
+
+
+// Select Crust Section
+
+const crusts = document.querySelectorAll(".crust")
+
+
+// Crust state
+
+let currenctCrustSrc = null
+
+
+crusts.forEach(el => {
+    el.onclick = productAnimationChanger
+})
+
+
+function productSrcAdder(productSrc) {
+    const addedProductImg = document.querySelector(".added-product-img")
+    const addedProductIcon = document.querySelector(".added-product-icon")
+
+    addedProductImg.src = productSrc;
+    
+    if (addedProductImg.classList.contains("added-pr-anime") && addedProductIcon.classList.contains("added-ic-anime")) {
+      addedProductImg.classList.remove("added-pr-anime");
+      addedProductIcon.classList.remove("added-ic-anime");
+    } 
+    else {
+      addedProductImg.classList.add("added-pr-anime");
+      addedProductIcon.classList.add("added-ic-anime");
+    }
+  }
+
+function productAnimationChanger(e){
+    const crustImg = document.querySelector(`#${e.target.id}-crust`);
+    currenctCrustSrc = crustImg.src
+    productSrcAdder(currenctCrustSrc)
+
+}
+
+
+
+
+
+
+// left menu 
+
+// const productBox = document.querySelectorAll(".product-box")
+// const productTitle = document.querySelectorAll("product-title")

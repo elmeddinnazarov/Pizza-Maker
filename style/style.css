@@ -30,6 +30,9 @@
   width: 20px;
   color: rgb(216, 239, 248);
 }
+.left-side .next-product-box {
+  margin-top: 40px;
+}
 @keyframes product-animation-add {
   from {
     left: -200%;
@@ -77,15 +80,19 @@
   left: 73%;
   bottom: 0;
 }
-.bottom-side .selected-items img {
-  animation: itemsAnime 3000ms ease-in-out;
+.bottom-side .selected-items .added-product-img {
   opacity: 0;
   width: 90%;
 }
-.bottom-side .selected-items i {
+.bottom-side .selected-items .added-pr-anime {
+  animation: itemsAnime 3000ms ease-in-out;
+}
+.bottom-side .selected-items .added-ic-anime {
   animation: itemsAnime 1500ms ease-in-out;
-  opacity: 0;
   animation-delay: 800ms;
+}
+.bottom-side .selected-items .added-product-icon {
+  opacity: 0;
   color: green;
   font-size: 60px;
   position: absolute;
@@ -102,20 +109,6 @@
   }
   100% {
     opacity: 0;
-  }
-}
-@keyframes iconAnime {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0);
   }
 }
 .bottom-side .pizzaContainer {
@@ -145,6 +138,7 @@
   top: 50%;
   width: 70%;
   height: 70%;
+  transition: 1s;
   transform: translate(-50%, -50%);
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -279,7 +273,7 @@
   position: absolute;
   padding: 10px 0;
 }
-.right-side .main-menu .products img {
+.right-side .main-menu .products .product-icons {
   width: 40px;
   margin: 0 0 20px 20px;
 }
