@@ -85,11 +85,11 @@
   width: 90%;
 }
 .bottom-side .selected-items .added-pr-anime {
-  animation: itemsAnime 3000ms ease-in-out;
+  animation: itemsAnime 2000ms ease-in;
 }
 .bottom-side .selected-items .added-ic-anime {
-  animation: itemsAnime 1500ms ease-in-out;
-  animation-delay: 800ms;
+  animation: itemsAnime 1800ms ease-out;
+  animation-delay: 500ms;
 }
 .bottom-side .selected-items .added-product-icon {
   opacity: 0;
@@ -247,81 +247,64 @@
   padding: 20px 10px;
   position: relative;
 }
-.right-side .title-A {
+.right-side .menu-titles {
   font-size: large;
   font-weight: bold;
-  margin-top: 20px;
+  padding: 0 0 15px 0;
 }
-.right-side .title-A i {
-  margin: 0 10px 0 5px;
-  font-size: 14px;
-  opacity: 0.7;
-}
-.right-side .title-A .sub-title {
-  font-size: 15px;
-}
-.right-side .main-menu {
+.right-side .menu-slide {
   position: relative;
-  min-height: 200px;
-  max-width: 400px;
-  margin: 20px 0;
+  max-height: 220px;
   overflow: hidden;
+  box-sizing: border-box;
+  margin-bottom: 40px;
 }
-.right-side .main-menu .products {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.right-side .menu-slide .product-box {
+  width: 250px;
+  height: 250px;
   padding: 10px 0;
 }
-.right-side .main-menu .products .product-icons {
+.right-side .menu-slide .product-box .product-icons {
   width: 40px;
   margin: 0 0 20px 20px;
 }
-.right-side .main-menu .products.seen {
-  left: 0;
-  animation: menu-come 700ms ease-out;
-}
-.right-side .main-menu .products.hidden {
-  left: 100%;
-  animation: menu-go 700ms ease-in;
-  opacity: 0;
-  left: -100%;
-}
-@keyframes menu-come {
-  0% {
-    left: 0%;
-    opacity: 1;
-  }
-  100% {
-    left: 200%;
-    opacity: 0;
-  }
-}
-@keyframes menu-go {
-  0% {
-    left: -200%;
-    opacity: 0;
-  }
-  100% {
-    left: 0%;
-    opacity: 1;
-  }
-}
-.right-side .sizes {
+.right-side .menu-slide .btn {
+  transition: 400ms ease-in-out;
   position: absolute;
-  top: 25%;
+  top: 160px;
+  width: 100px;
+  height: 30px;
+  margin-top: 30px;
+}
+.right-side .menu-slide .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.right-side .menu-slide .btn-next {
+  right: 0;
+}
+.right-side .menu-slide .btn-prev {
+  left: 0;
+}
+.right-side .menu-slide .btn-none {
+  display: none;
+}
+.right-side .menu-slide .changer-buttons {
+  width: 100%;
+  color: rgb(30, 77, 194);
+}
+.right-side .menu-slide .changer-buttons i {
+  font-size: 12px;
 }
 .right-side .sizes label {
-  padding: 0 30px 0 5px;
+  padding: 0 20px 0 5px;
   cursor: pointer;
 }
 .right-side .crust-menu {
-  position: absolute;
-  top: 40%;
-  left: 0;
+  padding: 20px 0;
 }
 .right-side .crust-menu label {
-  padding-left: 10px;
+  padding-left: 5px;
 }
 .right-side .crust-menu img {
   width: 70%;
