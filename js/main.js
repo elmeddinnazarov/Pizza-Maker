@@ -4,6 +4,46 @@
 const capitalize = text => text.charAt(0).toUpperCase() + text.slice(1);
 
 
+
+
+// Product Menu
+
+const product = document.querySelectorAll("#product")
+const pizzaBack = document.querySelector("#pizza-back")
+
+
+
+
+// Product State
+
+let productValue = null;
+let draggedEl = null;
+let currentProduct = null;
+
+
+product.forEach(el => {
+    el.onclick = e => {
+        productHandler(el)
+        productValue = e.target.getAttribute("value")
+        
+    }
+})
+
+
+
+
+function productHandler(el) {
+    draggedEl = el.cloneNode(true)
+    let rect = el.getBoundingClientRect();
+    console.log(rect);
+    draggedEl.style.position = "absolute"
+    draggedEl.style.top = rect.top + "px"
+    draggedEl.style.left = rect.left + "px"
+    document.body.append(draggedEl)
+}
+
+
+
 // Select Size Section
 
 const sizes = document.querySelectorAll(".size")
