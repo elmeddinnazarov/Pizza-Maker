@@ -83,5 +83,32 @@ function productAnimationChanger(e){
 
 // left menu 
 
-// const productBox = document.querySelectorAll(".product-box")
-// const productTitle = document.querySelectorAll("product-title")
+const productsList = document.querySelector(".products-list")
+const productTitle = document.querySelectorAll(".product-title")
+const productIcon = document.querySelectorAll(".pr-icon")
+
+//  Add Section
+// productTitle.forEach(element => {
+//     console.log(element.innerText);
+
+// });
+
+
+// State
+let parentElement = null
+
+
+
+//  Remove Section
+
+productIcon.forEach(icon => {
+
+    icon.onclick = e => {
+        e.target.style.backgroundColor = "rgb(209, 67, 20)"
+        e.target.parentElement.classList.add("remove-anim")
+
+    }
+});
+
+
+
