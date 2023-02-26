@@ -283,6 +283,7 @@
 .right-side .menu-slide .product-box .product-icons {
   width: 40px;
   margin: 0 0 20px 20px;
+  cursor: pointer;
 }
 .right-side .menu-slide .btn {
   transition: 400ms ease-in-out;

@@ -20,26 +20,43 @@ let productValue = null;
 let draggedEl = null;
 let currentProduct = null;
 
-
 product.forEach(el => {
-    el.onclick = e => {
-        productHandler(el)
-        productValue = e.target.getAttribute("value")
-        
-    }
-})
+    el.addEventListener("mousedown", e => {
+        onMouseDownHandler(el);
+        productValue = e.target.getAttribute("value");
+    });
+});
 
 
+document.addEventListener("mousemove", onMousweMoveHandler);
+
+document.addEventListener("mouseup", onMouseUpHandler);
 
 
-function productHandler(el) {
-    draggedEl = el.cloneNode(true)
+function onMouseDownHandler(el) {
+    draggedEl = el.cloneNode(true);
     let rect = el.getBoundingClientRect();
     console.log(rect);
-    draggedEl.style.position = "absolute"
-    draggedEl.style.top = rect.top + "px"
-    draggedEl.style.left = rect.left + "px"
-    document.body.append(draggedEl)
+    draggedEl.style.position = "absolute";
+    draggedEl.style.top = rect.top + "px";
+    draggedEl.style.left = rect.left + "px";
+    draggedEl.style.width = rect.width + 15 + "px";
+    draggedEl.style.height = rect.height + 15 + "px";
+    document.body.append(draggedEl);
+}
+
+
+function onMousweMoveHandler(e){
+    if (draggedEl){
+        rect = draggedEl.getBoundingClientRect();
+        draggedEl.style.top = (e.clientY - rect.height/2) + "px"; 
+        draggedEl.style.left = (e.clientX - rect.width/2) + "px"; 
+    }
+}
+
+
+function onMouseUpHandler(){
+    draggedEl.remove();
 }
 
 
