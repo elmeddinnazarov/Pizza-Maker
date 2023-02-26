@@ -287,7 +287,10 @@
   left: 0;
 }
 .right-side .menu-slide .btn-none {
-  display: none;
+  opacity: 0.1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .right-side .menu-slide .changer-buttons {
   width: 100%;

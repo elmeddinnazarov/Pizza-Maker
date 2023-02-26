@@ -344,7 +344,9 @@
       }
   
       .btn-none{
-        display: none;
+        opacity: 0.1;
+        user-select: none;
+        
       }
       
       .changer-buttons{

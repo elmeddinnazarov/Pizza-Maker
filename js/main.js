@@ -1,48 +1,7 @@
-// const product =  document.querySelectorAll("#product")
-// const productsMenu = document.querySelectorAll(".products")
-// const subTitle = document.querySelector(".sub-title")
 
 
-// // product state 
-
-// let menuType = ''
-// let nextIndex = 0
-
-
-
-
-// //use function
-
-// const capitalize = text => text.charAt(0).toUpperCase() + text.slice(1);
-
-
-
-
-// //product selection Section
-
-// product.forEach(el => {
-//     el.onclick = productAnimation
-// })
-
-
-// function productAnimation(){
-//     productsMenu.forEach((menu, index) => {
-//         if (menu.classList.contains("seen")){
-//             nextIndex = index + 1
-//             menu.classList.remove("seen")
-//             menu.classList.add("hidden")
-//             menuType = productsMenu[nextIndex].getAttribute("menu-type")
-
-//             if (nextIndex >= productsMenu.length) {
-//                 nextIndex = 0;
-//             }
-//         }
-//     })
-//     productsMenu[nextIndex].classList.remove("hidden")
-//     productsMenu[nextIndex].classList.add("seen")
-//     console.log(menuType);
-//     subTitle.textContent = capitalize(menuType)
-// }
+// Internel Functions
+const capitalize = text => text.charAt(0).toUpperCase() + text.slice(1);
 
 
 // Select Size Section
