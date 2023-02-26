@@ -72,9 +72,9 @@
           </div>
 
           <div id="pizza-back">
-            <img id="pizza" src="images/pizzaa.png" class="img-fluid" alt="">
-            <!-- <img class="cheese img-fluid" src="images/Untitled_Design__2_-removebg-preview.png" class="img-fluid" alt="">
-            <img class="products img-fluid" src="images/Untitled_Design__1_-removebg-preview.png" class="img-fluid" alt=""> -->
+            <img id="pizza" src="images/pizzaNoSouce.png" class="img-fluid" alt="">
+            <img class="pizza-products img-fluid" src="images/Untitled_Design__2_-removebg-preview.png" class="img-fluid" alt="">
+            <img class="pizza-products img-fluid" src="images/Untitled_Design__1_-removebg-preview.png" class="img-fluid" alt="">
           </div>
         </div>
 
@@ -95,14 +95,14 @@
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <p  id="product-menu" class="menu-titles">Souces</p>
+                    <p class="title-tag pr-title" name="souces" >Souces</p>
                     <div class="product-box" menu-type="souces">
                       <img draggable="false" id="product" class="img-fluid product-icons" value="tomato" src="images/pizzaSouce.png" alt="">
                       <img draggable="false"  id="product" class="img-fluid product-icons" value="without-souce" src="images/pizzaNoSouce.png" alt="">
                     </div>
                   </div>
-                  <!-- <div class="carousel-item">
-                    <p id="product-menu" class="menu-titles">Spices</p>
+                  <div class="carousel-item" name="spices" >
+                    <p class="title-tag pr-title">Spices</p>
                     <div class="product-box" menu-type="spices">
                       <img id="product" class="img-fluid product-icons" src="images/chili.png" alt="">
                       <img id="product" class="img-fluid product-icons" src="images/meatballs.png" alt="">
@@ -111,8 +111,8 @@
                       <img id="product" class="img-fluid product-icons" src="images/chicken-legs.png" alt="">
                     </div>
                   </div>
-                  <div class="carousel-item">
-                    <p id="product-menu" class="menu-titles">Vegetables</p>
+                  <div class="carousel-item" name="vegetables" >
+                    <p class="title-tag pr-title">Vegetables</p>
                     <div class="product-box" menu-type="spices">
                       <img id="product" class="img-fluid product-icons" src="images/chili.png" alt="">
                       <img id="product" class="img-fluid product-icons" src="images/meatballs.png" alt="">
@@ -121,8 +121,8 @@
                       <img id="product" class="img-fluid product-icons" src="images/chicken-legs.png" alt="">
                     </div>
                   </div>
-                  <div class="carousel-item">
-                    <p id="product-menu" class="menu-titles">Meat Products</p>
+                  <div class="carousel-item" name="meat products" >
+                    <p class="title-tag pr-title">Meat Products</p>
                     <div class="product-box" menu-type="spices">
                       <img id="product" class="img-fluid product-icons" src="images/chili.png" alt="">
                       <img id="product" class="img-fluid product-icons" src="images/meatballs.png" alt="">
@@ -138,7 +138,7 @@
                   <button class="btn btn-next carousel-control-next" type="button"
                     data-bs-target="#carouselExampleControls" data-bs-slide="next">
                     <span class="changer-buttons">Spices <i class="fa-solid fa-angles-right"></i></span>
-                  </div> -->
+                  </div>
                   <button class="btn-none btn btn-prev carousel-control-prev" type="button"
                     data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="changer-buttons"><i class="fa-solid fa-angles-left"> </i> Souces</span>
@@ -152,7 +152,7 @@
           </div>
           <div class="col-lg-12 m-0 p-0">
             <div class="sizes">
-              <p class="menu-titles">Select Size</p>
+              <p class="title-tag">Select Size</p>
               <input id="large" type="radio" value="large" class="size" name="pizza-size">
               <label for="large">Large</label>
               <input id="medium" type="radio" value="medium" checked class="size" name="pizza-size">
@@ -164,7 +164,7 @@
           <div class="col-lg-12 m-0 p-0">
             <div class="crust-menu">
               <div class="row m-0 p-0">
-                <p class="menu-titles">Select Crust</p>
+                <p class="title-tag">Select Crust</p>
                 <div class="col-6 m-0 p-0">
                   <div class="d-flex justify-content-between align-items-baseline m-0 p-0">
                     <input id="classic" type="radio" value="classic" checked class="crust" name="pizza-crust">

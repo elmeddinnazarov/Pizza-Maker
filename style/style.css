@@ -10,6 +10,7 @@
 .left-side {
   background-color: skyblue;
   position: relative;
+  height: 100vh;
 }
 .left-side .product-list {
   position: relative;
@@ -160,6 +161,14 @@
      -moz-user-select: none;
           user-select: none;
 }
+.bottom-side .pizzaContainer #pizza-back .pizza-products {
+  transition: 1s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+}
 .bottom-side .pizzaContainer .transp {
   background: transparent;
   width: 605px;
@@ -262,8 +271,9 @@
   background-color: aliceblue;
   padding: 20px 10px;
   position: relative;
+  height: 100vh;
 }
-.right-side .menu-titles {
+.right-side .title-tag {
   font-size: large;
   font-weight: bold;
   padding: 0 0 15px 0;
@@ -344,16 +354,16 @@
 .right-side .menu-slide .btn .changer-buttons i {
   font-size: 12px;
 }
-.right-side .menu-slide .sizes label {
+.right-side .sizes label {
   padding: 0 20px 0 5px;
   cursor: pointer;
 }
-.right-side .menu-slide .crust-menu {
+.right-side .crust-menu {
   padding: 20px 0;
 }
-.right-side .menu-slide .crust-menu label {
+.right-side .crust-menu label {
   padding-left: 5px;
 }
-.right-side .menu-slide .crust-menu img {
+.right-side .crust-menu img {
   width: 70%;
 }/*# sourceMappingURL=style.css.map */

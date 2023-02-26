@@ -8,6 +8,7 @@
 .left-side {
   background-color: skyblue;
   position: relative;
+  height: 100vh;
 
   .product-list {
     position: relative;
@@ -193,20 +194,14 @@
         user-select: none;
       }
 
-      // .products{
-      //   position: absolute;
-      //   top: 50%;
-      //   left: 50%;
-      //   transform: translate(-50%, -50%);
-      //   width: 320px;
-      // }
-      // .cheese{
-      //   position: absolute;
-      //   top: 50%;
-      //   left: 50%;
-      //   transform: translate(-50%, -50%);
-      //   width: 390px;
-      // }
+      .pizza-products{
+        transition: 1s;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 320px;
+      }
     }
 
     .transp {
@@ -338,8 +333,10 @@
   background-color: aliceblue;
   padding: 20px 10px;
   position: relative;
+  height: 100vh;
 
-  .menu-titles {
+
+  .title-tag {
     font-size: large;
     font-weight: bold;
     padding: 0 0 15px 0;
@@ -439,28 +436,28 @@
       }
     }
 
+  }
 
+  // -----------------------------------------
+  // -----------------------------------------
 
-    // -----------------------------------------
-    // -----------------------------------------
-
-    .sizes {
-      label {
-        padding: 0 20px 0 5px;
-        cursor: pointer;
-      }
-    }
-
-    .crust-menu {
-      padding: 20px 0;
-
-      label {
-        padding-left: 5px;
-      }
-
-      img {
-        width: 70%;
-      }
+  .sizes {
+    label {
+      padding: 0 20px 0 5px;
+      cursor: pointer;
     }
   }
+
+  .crust-menu {
+    padding: 20px 0;
+
+    label {
+      padding-left: 5px;
+    }
+
+    img {
+      width: 70%;
+    }
+  }
+
 }

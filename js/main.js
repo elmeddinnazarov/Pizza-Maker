@@ -65,11 +65,14 @@ function onMouseUpHandler(){
 
 const sizes = document.querySelectorAll(".size")
 const pizza = document.querySelector("#pizza")
+const pizzaProducts = document.querySelectorAll(".pizza-products")
+
 
 
 // size state
 
-let currentValue = 'medium' // 'small', 'medium', 'large'
+let currentPizzaValue = 'medium' // 'small', 'medium', 'large'
+const defaultSize = 320
 
 sizes.forEach(el => {
     el.onclick = sizeHandler
@@ -77,19 +80,36 @@ sizes.forEach(el => {
 
 
 function sizeHandler(e){
-    currentValue = e.target.getAttribute("value")
-    switch(currentValue){
+    currentPizzaValue = e.target.getAttribute("value")
+    switch(currentPizzaValue){
         case "small":
             pizza.style.width = 55 + "%"
             pizza.style.height = 55 + "%"
+            pizzaProducts.forEach(el => {
+                
+                el.style.width = defaultSize * 0.85 + "px"
+                el.style.height = defaultSize * 0.85 + "px"
+            });
+
             break
+
         case "medium":
             pizza.style.width = 70 + "%"
             pizza.style.height = 70 + "%"
+            pizzaProducts.forEach(el => {
+                
+                el.style.width = defaultSize + "px"
+                el.style.height = defaultSize + "px"
+            });
             break
         case "large":
             pizza.style.width = 90 + "%"
             pizza.style.height = 90 + "%"
+            pizzaProducts.forEach(el => {
+                
+                el.style.width = defaultSize * 1.4 + "px"
+                el.style.height = defaultSize * 1.4 + "px"
+            });
             break
     }
 }
@@ -144,6 +164,7 @@ const productsList = document.querySelector(".products-list")
 const productTitle = document.querySelectorAll(".product-title")
 const productIcon = document.querySelectorAll(".pr-icon")
 
+
 //  Add Section
 // productTitle.forEach(element => {
 //     console.log(element.innerText);
@@ -169,3 +190,14 @@ productIcon.forEach(icon => {
 
 
 
+// Product Slide Section
+
+// const menuTitles = document.querySelectorAll(".pr-title")
+// const caruselActive = document.querySelector(".active")
+// const caruselItem = document.querySelectorAll(".carousel-item")
+
+
+
+// caruselItem.forEach(element => {
+
+// });
