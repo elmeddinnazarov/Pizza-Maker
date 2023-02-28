@@ -6,6 +6,33 @@ const capitalize = text => text.charAt(0).toUpperCase() + text.slice(1);
 
 
 
+
+// Opening and closing the menu
+
+const menu = document.querySelector(".right-side")
+const button = document.querySelector("#toggle-button")
+const icon = document.querySelector("#menu-icon")
+
+
+
+button.onclick = () => {
+    menu.classList.toggle("right-side-close")
+
+    if (icon.classList.contains("fa-angles-right")){
+        icon.classList.remove("fa-angles-right")
+        icon.classList.add("fa-angles-left")
+    }
+    else{
+        icon.classList.remove("fa-angles-left")
+        icon.classList.add("fa-angles-right")
+    }
+    
+}
+
+
+
+
+
 // Product Menu
 
 const product = document.querySelectorAll("#product")
@@ -87,8 +114,8 @@ function sizeHandler(e){
             pizza.style.height = 55 + "%"
             pizzaProducts.forEach(el => {
                 
-                el.style.width = defaultSize * 0.85 + "px"
-                el.style.height = defaultSize * 0.85 + "px"
+                el.style.width = defaultSize * (55 / 70) + "px"
+                el.style.height = defaultSize * (55 / 70) + "px"
             });
 
             break
@@ -107,8 +134,8 @@ function sizeHandler(e){
             pizza.style.height = 90 + "%"
             pizzaProducts.forEach(el => {
                 
-                el.style.width = defaultSize * 1.4 + "px"
-                el.style.height = defaultSize * 1.4 + "px"
+                el.style.width = defaultSize * (90 / 70) + "px"
+                el.style.height = defaultSize * (90 / 70) + "px"
             });
             break
     }
@@ -201,3 +228,7 @@ productIcon.forEach(icon => {
 // caruselItem.forEach(element => {
 
 // });
+
+
+
+

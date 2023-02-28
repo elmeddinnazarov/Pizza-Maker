@@ -7,8 +7,13 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.left-side {
+.width-box {
   background-color: skyblue;
+  overflow: hidden;
+  position: relative;
+}
+
+.left-side {
   position: relative;
   height: 100vh;
 }
@@ -22,6 +27,7 @@
   margin-bottom: 5px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
   height: 25px;
+  display: none;
 }
 .left-side .product-list .product-title .pr-name {
   background-color: rgb(216, 239, 248);
@@ -54,22 +60,23 @@
 }
 .left-side .remove-anim {
   animation: product-animation-remove 700ms ease-out;
-  position: relative;
   right: 500%;
+  position: relative;
 }
 @keyframes product-animation-remove {
   from {
     left: 0;
+    opacity: 1;
+    display: block;
   }
   to {
     left: -200%;
+    opacity: 0;
+    display: none;
   }
 }
 
 .bottom-side {
-  background-color: skyblue;
-  width: 100%;
-  height: 100vh;
   position: relative;
 }
 .bottom-side .timer-box {
@@ -267,35 +274,90 @@
   transform: rotate(85deg);
 }
 
-.right-side {
-  background-color: aliceblue;
-  padding: 20px 10px;
+#right-menu {
   position: relative;
-  height: 100vh;
 }
-.right-side .title-tag {
+#right-menu .right-side {
+  background-color: aliceblue;
+  position: relative;
+  padding: 20px;
+  left: 0;
+  transition: 0.4s ease-in-out;
+}
+#right-menu .right-side-close {
+  left: 100%;
+}
+#right-menu .right-side::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+#right-menu .right-side::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+#right-menu .right-side::-webkit-scrollbar-thumb {
+  background-color: lightblue;
+}
+#right-menu .right-side::-webkit-scrollbar-corner {
+  background-color: rgb(255, 255, 255);
+}
+#right-menu .right-side #toggle-button {
+  padding: 35px 2px;
+  background-color: aliceblue;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translateY(-50%);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+#right-menu .right-side #toggle-button #menu-icon {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0);
+  transition: 0.3s ease-in-out;
+}
+#right-menu .right-side #toggle-button:hover {
+  padding: 35px 6px;
+  left: -7%;
+}
+#right-menu .right-side #toggle-button:hover #menu-icon {
+  color: black;
+}
+#right-menu .right-side .title-tag {
   font-size: large;
   font-weight: bold;
   padding: 0 0 15px 0;
 }
-.right-side .menu-slide {
+#right-menu .right-side .menu-slide {
   position: relative;
   max-height: 220px;
   overflow: hidden;
   box-sizing: border-box;
   margin-bottom: 40px;
 }
-.right-side .menu-slide .product-box {
+#right-menu .right-side .menu-slide .product-box {
   width: 250px;
   height: 250px;
   padding: 10px 0;
 }
-.right-side .menu-slide .product-box .product-icons {
-  width: 40px;
-  margin: 0 0 20px 20px;
+#right-menu .right-side .menu-slide .product-box .product-icons {
+  margin: 0 0 0px 20px;
   cursor: pointer;
 }
-.right-side .menu-slide .btn {
+#right-menu .right-side .menu-slide .product-box .souces {
+  width: 60px;
+}
+#right-menu .right-side .menu-slide .product-box .spices {
+  width: 50px;
+}
+#right-menu .right-side .menu-slide .product-box .vegetables {
+  width: 40px;
+}
+#right-menu .right-side .menu-slide .product-box .meats {
+  width: 40px;
+}
+#right-menu .right-side .menu-slide .btn {
   transition: 400ms ease-in-out;
   position: absolute;
   top: 160px;
@@ -303,11 +365,11 @@
   height: 30px;
   margin-top: 30px;
 }
-.right-side .menu-slide .btn:focus {
+#right-menu .right-side .menu-slide .btn:focus {
   outline: none;
   box-shadow: none;
 }
-.right-side .menu-slide .btn:focus .btn {
+#right-menu .right-side .menu-slide .btn:focus .btn {
   transition: 400ms ease-in-out;
   position: absolute;
   top: 160px;
@@ -315,55 +377,52 @@
   height: 30px;
   margin-top: 30px;
 }
-.right-side .menu-slide .btn:focus .btn:focus {
+#right-menu .right-side .menu-slide .btn:focus .btn:focus {
   outline: none;
   box-shadow: none;
 }
-.right-side .menu-slide .btn:focus .btn-next {
+#right-menu .right-side .menu-slide .btn:focus .btn-next {
   right: 0;
 }
-.right-side .menu-slide .btn:focus .btn-prev {
+#right-menu .right-side .menu-slide .btn:focus .btn-prev {
   left: 0;
 }
-.right-side .menu-slide .btn:focus .btn-none {
+#right-menu .right-side .menu-slide .btn:focus .btn-none {
   display: none;
 }
-.right-side .menu-slide .btn:focus #changer-buttons {
+#right-menu .right-side .menu-slide .btn:focus #changer-buttons {
   width: 100%;
   color: rgb(30, 77, 194);
 }
-.right-side .menu-slide .btn:focus #changer-buttons i {
+#right-menu .right-side .menu-slide .btn:focus #changer-buttons i {
   font-size: 12px;
 }
-.right-side .menu-slide .btn .btn-next {
+#right-menu .right-side .menu-slide .btn .btn-next {
   right: 0;
 }
-.right-side .menu-slide .btn .btn-prev {
+#right-menu .right-side .menu-slide .btn .btn-prev {
   left: 0;
 }
-.right-side .menu-slide .btn .btn-none {
+#right-menu .right-side .menu-slide .btn .btn-none {
   opacity: 0.1;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.right-side .menu-slide .btn .changer-buttons {
+#right-menu .right-side .menu-slide .btn .changer-buttons {
   width: 100%;
   color: rgb(30, 77, 194);
 }
-.right-side .menu-slide .btn .changer-buttons i {
+#right-menu .right-side .menu-slide .btn .changer-buttons i {
   font-size: 12px;
 }
-.right-side .sizes label {
+#right-menu .right-side .sizes label {
   padding: 0 20px 0 5px;
   cursor: pointer;
 }
-.right-side .crust-menu {
-  padding: 20px 0;
-}
-.right-side .crust-menu label {
+#right-menu .right-side .crust-menu label {
   padding-left: 5px;
 }
-.right-side .crust-menu img {
+#right-menu .right-side .crust-menu img {
   width: 70%;
 }/*# sourceMappingURL=style.css.map */
